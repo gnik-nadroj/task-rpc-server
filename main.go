@@ -10,7 +10,7 @@ import (
 
 
 func main() {
-   rpc.RegisterName("MyService", &service.TaskService{})
+   rpc.RegisterName("TaskService", &service.TaskService{})
 
    listener, err := net.Listen("tcp", ":1234")
    if err != nil {

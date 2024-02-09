@@ -26,7 +26,7 @@ func CreateTask(name, desc string) (int, error) {
 }
 
 func UpdateTask(id int, name, desc string) (int, error) {
-	if(id <= 0) {
+	if(id < 0) {
 		return -1, errors.New("Id is invalid")
 	} else if(len(name) == 0) {
 		return -1, errors.New("The name should be provided")

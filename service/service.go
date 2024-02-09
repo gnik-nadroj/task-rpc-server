@@ -5,14 +5,14 @@ import (
 )
 
 type Args struct {
-	id int
-	name, description string
+	Id int
+	Name, Description string
 }
 
 type TaskService struct{}
 
 func (t *TaskService) CreateTask(args *Args, reply *int) error {
-	id, err := model.CreateTask(args.name, args.description)
+	id, err := model.CreateTask(args.Name, args.Description)
 
 	if(err!= nil) {
 		return err
